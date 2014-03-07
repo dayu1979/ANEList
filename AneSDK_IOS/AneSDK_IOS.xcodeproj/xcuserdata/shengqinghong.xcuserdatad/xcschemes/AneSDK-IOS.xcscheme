@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1891BF8516EF382B007A0B65"
-               BuildableName = "libAneSDK_IOS.a"
+               BuildableName = "libAneSDK.a"
                BlueprintName = "AneSDK-IOS"
                ReferencedContainer = "container:AneSDK_IOS.xcodeproj">
             </BuildableReference>

@@ -20,7 +20,14 @@ package com.lzm.anesdk.weibo
 			if(isSimulator) return;
 			extensionContext.call(aneFunction,"login");
 		}
-		
+		public function getUserInfo():Object{
+			if(isSimulator) return null;
+			return extensionContext.call(aneFunction,"getUserInfo");
+		}
+		public function getUserFriends():Object{
+			if(isSimulator) return null;
+			return extensionContext.call(aneFunction,"getUserFriends");
+		}
 		/**
 		 * 分享 
 		 * @param status		微博类容

@@ -11,7 +11,8 @@ package
 		{
 			AneSDK.initSDK(!Geolocation.isSupported,AneSDK.ANE_PLATFORM_IOS);
 			//new TestOpenQQ();
-			new TestWX();
+			//new TestWX();
+			new TestWeiBo();
 		}
 	}
 }

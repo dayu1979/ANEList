@@ -7,6 +7,7 @@
 //
 
 #import "WeiBoDelegate.h"
+#import "JSONKit.h"
 
 @implementation WeiBoDelegate
 
@@ -70,8 +71,10 @@
     [[NSUserDefaults standardUserDefaults] setObject:mWeiBo.accessToken forKey:@"SinaWeiBoAccessToken"];
     [[NSUserDefaults standardUserDefaults] setObject:mWeiBo.expirationDate forKey:@"SinaWeiBoExpirationDate"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self broadcast:EVENT_SINAWEIBODIDLOGIN level:EVENT_SINAWEIBODIDLOGIN];
+    NSDictionary *dictionary=[[NSDictionary alloc]initWithObjectsAndKeys:mWeiBo.userID,@"userID",mWeiBo.accessToken,@"accessToken", nil];
+    NSError * ERR;
+    [self broadcast:EVENT_SINAWEIBODIDLOGIN level:[dictionary JSONStringWithOptions:JKSerializeOptionNone error:&ERR]];
+    [ dictionary release];
 }
 
 - (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo{
