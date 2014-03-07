@@ -315,7 +315,6 @@
 
 /**
  
- /**
  * Called when the add_share has response.
  */
 /*!

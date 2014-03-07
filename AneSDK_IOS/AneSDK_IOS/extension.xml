@@ -26,16 +26,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The views and conclusions contained in the software and documentation are those
 of the authors and should not be interpreted as representing official policies, 
 either expressed or implied, of the FreeBSD Project.
-
+真无奈，libanesdk.a名字里面不能带下划线
+ 所以发布.a之后，需要改名为不带下划线的，extention.xml里面也不能有下划线
 -->
-
-<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
 	<id>com.lzm.anesdk.ios</id>
 	<versionNumber>1</versionNumber>
 	<platforms>
 		<platform name="iPhone-ARM">
 			<applicationDeployment>
-				<nativeLibrary>libAneSDK_IOS.a</nativeLibrary>
+				<nativeLibrary>libAneSDK.a</nativeLibrary>
 				<initializer>AneSDKIOSExtInitializer</initializer>
 				<finalizer>AneSDKIOSExtFinalizer</finalizer>
 			</applicationDeployment>

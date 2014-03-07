@@ -166,7 +166,7 @@
 		1891BF7D16EF2A89007A0B65 /* AneEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AneEvents.h; sourceTree = "<group>"; };
 		1891BF8116EF2C74007A0B65 /* AneSDKTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AneSDKTools.h; path = tools/AneSDKTools.h; sourceTree = "<group>"; };
 		1891BF8216EF2C74007A0B65 /* AneSDKTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AneSDKTools.m; path = tools/AneSDKTools.m; sourceTree = "<group>"; };
-		1891BFA216EF382B007A0B65 /* libAneSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAneSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1891BFA216EF382B007A0B65 /* libAneSDK_IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAneSDK_IOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1891BFAB16EF517B007A0B65 /* Platformlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platformlib.h; sourceTree = "<group>"; };
 		1891BFAD16EF531A007A0B65 /* YZPlatformDelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZPlatformDelete.h; sourceTree = "<group>"; };
 		1891BFAE16EF531A007A0B65 /* YZPlatformDelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZPlatformDelete.m; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			children = (
 				1891BF4B16EF1DE9007A0B65 /* AneSDK_IOS.ane */,
 				1891BF4E16EF1DE9007A0B65 /* DebugAneSDK_IOSAIRApp.app */,
-				1891BFA216EF382B007A0B65 /* libAneSDK.a */,
+				1891BFA216EF382B007A0B65 /* libAneSDK_IOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 			);
 			name = "AneSDK-IOS";
 			productName = AneSDK_IOS;
-			productReference = 1891BFA216EF382B007A0B65 /* libAneSDK.a */;
+			productReference = 1891BFA216EF382B007A0B65 /* libAneSDK_IOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -658,11 +658,11 @@
 		1891BF6416EF1DE9007A0B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AIR_SDK_PATH = "/Applications/Adobe Flash Builder 4.7/sdks/4.6.0";
+				AIR_SDK_PATH = "/Applications/Adobe Flash Builder 4.7/eclipse/plugins/com.adobe.flash.compiler_4.7.0.349722/AIRSDK";
 				EXECUTABLE_EXTENSION = ane;
 				EXECUTABLE_PREFIX = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				NATIVEEXTENSION_SWC = /Users/lzm/flash/projets/ane/AneSDK/bin/AneSDK.swc;
+				NATIVEEXTENSION_SWC = /Users/shengqinghong/Documents/work/AneSDK/bin/AneSDK.swc;
 				PRODUCT_NAME = AneSDK_IOS;
 			};
 			name = Debug;
@@ -670,11 +670,11 @@
 		1891BF6516EF1DE9007A0B65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AIR_SDK_PATH = "/Applications/Adobe Flash Builder 4.7/sdks/4.6.0";
+				AIR_SDK_PATH = "/Applications/Adobe Flash Builder 4.7/eclipse/plugins/com.adobe.flash.compiler_4.7.0.349722/AIRSDK";
 				EXECUTABLE_EXTENSION = ane;
 				EXECUTABLE_PREFIX = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				NATIVEEXTENSION_SWC = /Users/lzm/flash/projets/ane/AneSDK/bin/AneSDK.swc;
+				NATIVEEXTENSION_SWC = /Users/shengqinghong/Documents/work/AneSDK/bin/AneSDK.swc;
 				PRODUCT_NAME = AneSDK_IOS;
 			};
 			name = Release;
@@ -702,6 +702,7 @@
 		1891BFA016EF382B007A0B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/AneSDK_IOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AneSDK_IOS/AneSDK_IOS-Prefix.pch";
@@ -714,7 +715,8 @@
 					"\"$(SRCROOT)/AneSDK_IOS/weixin\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = AneSDK;
+				PRODUCT_NAME = AneSDK_IOS;
+				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -723,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "/Users/lzm/git/ANEList/Export/iPhone-ARM";
+				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/AneSDK_IOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AneSDK_IOS/AneSDK_IOS-Prefix.pch";
@@ -735,7 +738,8 @@
 					"\"$(SRCROOT)/AneSDK_IOS/weixin\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = AneSDK;
+				PRODUCT_NAME = AneSDK_IOS;
+				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
