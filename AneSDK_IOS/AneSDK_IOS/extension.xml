@@ -28,6 +28,7 @@ of the authors and should not be interpreted as representing official policies,
 either expressed or implied, of the FreeBSD Project.
 真无奈，libanesdk.a名字里面不能带下划线
  所以发布.a之后，需要改名为不带下划线的，extention.xml里面也不能有下划线
+ 不过有件事百思不得其解，就是ane那个productname居然也要把名字的iOS去掉然后才能生成
 -->
 <extension xmlns="http://ns.adobe.com/air/extension/4.0">
 	<id>com.lzm.anesdk.ios</id>
