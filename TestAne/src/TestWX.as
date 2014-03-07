@@ -10,7 +10,7 @@ package
 		public function TestWX()
 		{
 			var wx:WeiXin = new WeiXin();
-			wx.registerApp("wx8a4a9f30028b58af");
+			wx.registerApp("wxcc4ebb3d77ef036b");
 			
 			trace(wx.isWXAppInstalled());
 			

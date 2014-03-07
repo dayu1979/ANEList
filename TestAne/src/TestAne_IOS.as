@@ -10,7 +10,8 @@ package
 		public function TestAne_IOS()
 		{
 			AneSDK.initSDK(!Geolocation.isSupported,AneSDK.ANE_PLATFORM_IOS);
-			new TestOpenQQ();
+			//new TestOpenQQ();
+			new TestWX();
 		}
 	}
 }
